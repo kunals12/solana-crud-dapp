@@ -5,7 +5,7 @@ import { WalletButton } from '../solana/solana-provider'
 import { AppHero, ellipsify } from '../ui/ui-layout'
 import { ExplorerLink } from '../cluster/cluster-ui'
 import { useCrudappProgram } from './crudapp-data-access'
-import { CrudappCreate, CrudappList } from './crudapp-ui'
+import { CrudappCreate, JournalList } from './crudapp-ui'
 
 export default function CrudappFeature() {
   const { publicKey } = useWallet()
@@ -24,7 +24,7 @@ export default function CrudappFeature() {
         </p>
         <CrudappCreate />
       </AppHero>
-      <CrudappList />
+      <JournalList />
     </div>
   ) : (
     <div className="max-w-4xl mx-auto">
